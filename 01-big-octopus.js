@@ -27,14 +27,29 @@ function nlognBiggestFish(fishes) {
 // console.log(nlognBiggestFish(fishies))
 
 function linearBiggestFish(fishes) {
-  // Code goes here ...
+  for (let i = 0; i < fishes.length - 2; i++){
+    if (fishes[i] < fishes[i + 1]) {
+      let temp = fishes[i];
+      fishes[i] = fishes[i + 1];
+      fishes[i + 1] = temp;
+    }
+  }
+  return fishes[fishes.length - 1];
 }
 
+// console.log(linearBiggestFish(fishies));
 
-tilesArray = ["up", "right-up", "right", "right-down", "down", "left-down", "left", "left-up"]
+
+tiles = ["up", "right-up", "right", "right-down", "down", "left-down", "left", "left-up"]
 function slowDance(direction, tilesArray) {
-  // Code goes here ...
+  for (let i = 0; i< tilesArray.length; i++){
+    if(direction === tilesArray[i]) {
+      return i;
+    }
+  }
 }
+
+// console.log(slowDance("right-down", tiles));
 
 
 tilesObj = {
@@ -48,5 +63,7 @@ tilesObj = {
   "left-up": 7
 }
 function fastDance(direction, tilesObj) {
-  // Code goes here ...
+  return tilesObj.direction;
 }
+
+console.log(fastDance("down", tilesObj));
