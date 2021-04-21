@@ -16,12 +16,15 @@ function quadraticBiggestFish(fishes) {
 
 }
 
-console.log(quadraticBiggestFish(fishies));
+// console.log(quadraticBiggestFish(fishies));
 
 function nlognBiggestFish(fishes) {
-  // Code goes here ...
+  fishes.sort(function(a,b){
+    a.length - b.length
+  })
+  return fishes[fishes.length-1]
 }
-
+// console.log(nlognBiggestFish(fishies))
 
 function linearBiggestFish(fishes) {
   // Code goes here ...
