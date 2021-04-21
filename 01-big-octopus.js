@@ -63,7 +63,7 @@ tilesObj = {
   "left-up": 7
 }
 function fastDance(direction, tilesObj) {
-  return tilesObj.direction;
+  return tilesObj[direction];
 }
 
 console.log(fastDance("down", tilesObj));
