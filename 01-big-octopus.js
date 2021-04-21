@@ -1,7 +1,22 @@
+const fishies = ['fish', 'fiiish', 'fiiiiish', 'fiiiish', 'fffish',
+'ffiiiiisshh', 'fsh', 'fiiiissshhhhhh'];
+// => "fiiiissshhhhhh";
+
 function quadraticBiggestFish(fishes) {
-  // Code goes here ...
+  let biggest = "";
+
+  for(let i = 0; i < fishes.length; i++){
+    for(let j = i + 1; j < fishes.length; j++){
+      if(fishes[i].length < fishes[j].length){
+        biggest = fishes[j];
+      }
+    }
+  }
+  return biggest
+
 }
 
+console.log(quadraticBiggestFish(fishies));
 
 function nlognBiggestFish(fishes) {
   // Code goes here ...
